@@ -21,24 +21,76 @@
 
 function uniqueArray(arr) {
     let output = [] //[1,2,3,5,9,8]
-
     for (let i = 0; i < arr.length; i++) {
         if (i = 0) {
             output.push(arr[i])
-        } else {
-            var flag = true
+        } 
+        else {
             for (let j = 0; j < output.length; j++) {
                 if (arr[i] !== output[j]) {
-                    flag = true
-                } else {
-                    flag = false
-                }
-            }
-            if (flag = true) {
-                output.push(arr[i])
+                    output.push(arr[i])
+                } 
             }
         }
     }
     return output
 }
 console.log(uniqueArray([1, 2, 3, 5, 1, 5, 9, 1, 2, 8]))
+
+
+// var data = [
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     },
+//     {
+//         name : 'Bob' ,
+//         Age : '20',
+//         Desgination : 'Student',
+//         Phonenumber : '36438-33443'
+//     }
+// ]

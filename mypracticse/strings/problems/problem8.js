@@ -56,44 +56,11 @@ const { performance } = require('perf_hooks');
 // }
 
 
-// var t0 = performance.now()
-// checkanagram('abac', 'aabc') // <---- The function you're measuring time for 
-// var t1 = performance.now()
-// console.log("Call to dual hashmethod 1 took " + (t1 - t0) + " milliseconds.")
-// function hashingfunction(s) {
-//     let hash = {}
-//     for (let i = 0; i < s.length; i++) {
-//         var x = Object.keys(hash)
-//         if (x.includes(s[i])) {
-//             hash[s[i]] = hash[s[i]] + 1
-//         } else {
-//             hash[s[i]] = 1
-//         }
-//     }
-//     console.log(hash)
-//     return hash
-// }
-// function checkanagram(s1, s2) {
-//     let output = []
-//     h1 = hashingfunction(s1)
-//     h2 = hashingfunction(s2)
-//     for (var key in h1) {
-//         // console.log(h1[key])
-//         if (h1[key] !== h2[key]) {
-//             output = false
-//             break
-//         } else {
-//             output = true
-//         }
-//     }
-//     console.log("checkanagramoutput", output)
-// }
-
 var t0 = performance.now()
-checkanagram2('abac', 'aabc') // <---- The function you're measuring time for 
+checkanagram('abac', 'aabc') // <---- The function you're measuring time for 
 var t1 = performance.now()
-console.log("Call to dual hashmethod2 took " + (t1 - t0) + " milliseconds.")
-function hashingfunction2(s) {
+console.log("Call to dual hashmethod 1 took " + (t1 - t0) + " milliseconds.")
+function hashingfunction(s) {
     let hash = {}
     for (let i = 0; i < s.length; i++) {
         var x = Object.keys(hash)
@@ -105,26 +72,58 @@ function hashingfunction2(s) {
     }
     return hash
 }
-function decreasethecount(s2,h1){
-    for (let i = 0; i < s2.length; i++) {
-        let key = s2[i]
-        h1[key] = h1[s2[i]]-1
-     }
-     return h1
-}
-function checkanagram2(s1, s2) {
+function checkanagram(s1, s2) {
     let output = []
-    h1 = hashingfunction2(s1)
-    h1 = decreasethecount(s2,h1)
-    for( var key in h1){
-       if(h1[key] != 0){
-            output = false 
+    h1 = hashingfunction(s1)
+    h2 = hashingfunction(s2)
+    for (var key in h1) {
+        // console.log(h1[key])
+        if (h1[key] !== h2[key]) {
+            output = false
             break
-        }else{
+        } else {
             output = true
         }
     }
-    console.log("output1",output)
+    console.log("checkanagramoutput", output)
 }
-checkanagram2('abac','aabc')
-checkanagram2('abbc','aabc')
+
+// var t0 = performance.now()
+// checkanagram2('abac', 'aabc') // <---- The function you're measuring time for 
+// var t1 = performance.now()
+// console.log("Call to dual hashmethod2 took " + (t1 - t0) + " milliseconds.")
+// function hashingfunction2(s) {
+//     let hash = {}
+//     for (let i = 0; i < s.length; i++) {
+//         var x = Object.keys(hash)
+//         if (x.includes(s[i])) {
+//             hash[s[i]] = hash[s[i]] + 1
+//         } else {
+//             hash[s[i]] = 1
+//         }
+//     }
+//     return hash
+// }
+// function decreasethecount(s2,h1){
+//     for (let i = 0; i < s2.length; i++) {
+//         let key = s2[i]
+//         h1[key] = h1[s2[i]]-1
+//      }
+//      return h1
+// }
+// function checkanagram2(s1, s2) {
+//     let output = []
+//     h1 = hashingfunction2(s1)
+//     h1 = decreasethecount(s2,h1)
+//     for( var key in h1){
+//        if(h1[key] != 0){
+//             output = false 
+//             break
+//         }else{
+//             output = true
+//         }
+//     }
+//     console.log("output1",output)
+// }
+// checkanagram2('abac','aabc')
+// checkanagram2('abbc','aabc')
