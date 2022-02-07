@@ -12,6 +12,7 @@ console.log(findstringcount('potatopotatopotato','potato'))
 
 function findstring(str,inp) {
   let check = str.split(inp)
+  console.log("check",check)
   return check.length-1
 }
 console.log(findstring("potatoapple",'potato'))

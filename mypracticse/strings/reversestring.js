@@ -1,20 +1,15 @@
 
-// function reversestring(str) {
-//    let arr = str.split('')
-//    let reverse = arr.reverse().join('')
-//    return reverse
+// function reverseString(inp){
+//   var x = inp.split('').reverse().join('')
+//   return x
 // }
-// console.log(reversestring('kaviya'))
+// console.log(reverseString('kaviya'))
 
-// function reverseString(str) {
-//    var newstring = '';
-//    for (var i = str.length - 1; i >= 0; i--) {
-//       newstring = newstring + str[i]
-//    }
-//    return newstring
-// }
-// let output = reverseString('hello')
-// console.log(output)
+function reverseStringinloop(inp){
+  for(let i = inp.length ; i >= 0  ; i++){
+    console.log("inp",inp)
+  }
+}
 
 // function reverseStringinloop(str) {
 //    let reversedstring = ''
@@ -37,7 +32,6 @@
 // console.log(reverseword('The quick brown fox'))
 
 
-
 // function reversesentence(str) {
 //    let arr = str.split('')
 //    let reversesentence = arr.reverse().join('')
@@ -45,18 +39,18 @@
 // }
 // console.log(reversesentence("Welcome to this Javascript Guide!"))
 
-function reverseeachword(str){
-   let arr = str.split(' ')
-   let result = []
-   for(let i = 0 ; i < arr.length ; i++){
-      //console.log("arr[i]",arr[i])
-      let word = arr[i].split('').reverse().join('')
-      result.push(word)
-      //console.log("result",result)
-   }
-   return result.join(' ')
-  }
-  console.log(reverseeachword('hi i am kaviya'))
+// function reverseeachword(str){
+//    let arr = str.split(' ')
+//    let result = []
+//    for(let i = 0 ; i < arr.length ; i++){
+//       //console.log("arr[i]",arr[i])
+//       let word = arr[i].split('').reverse().join('')
+//       result.push(word)
+//       //console.log("result",result)
+//    }
+//    return result.join(' ')
+//   }
+//   console.log(reverseeachword('hi i am kaviya'))
 
 // //Given a string, reverse each word in the sentence
 // //Welcome to this Javascript Guide!

@@ -4,8 +4,6 @@ function reverse(arr) {
     //write polyfill
     let newarray = []
 	for(var i = arr.length-1 ; i >= 0 ; i--) {
-		console.log("arr.length",arr.length-1)
-		console.log("i",i)
 		newarray.push(arr[i])
 	}
 	return newarray

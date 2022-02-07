@@ -75,9 +75,12 @@ function hashingfunction(s) {
 function checkanagram(s1, s2) {
     let output = []
     h1 = hashingfunction(s1)
+    console.log("h1",h1)
     h2 = hashingfunction(s2)
+    console.log("h2",h2)
     for (var key in h1) {
-        // console.log(h1[key])
+        console.log("key",key)
+        console.log(h1[key])
         if (h1[key] !== h2[key]) {
             output = false
             break

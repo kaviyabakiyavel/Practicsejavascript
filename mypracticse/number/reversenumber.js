@@ -4,6 +4,7 @@
 
 function rev(num){
     let str = num.toString()
+    console.log("str",str)
     let arr = []
     let result = ''
     for(let i = 0 ; i < str.length ; i++){
@@ -14,3 +15,4 @@ function rev(num){
     return result 
 }
 console.log(rev(5121))
+
